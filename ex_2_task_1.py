@@ -34,11 +34,44 @@
 # As proof, please manually copy/paste the console output for one run into a file called
 # results1.txt
 
+#imported re module to support regular expressions and will validate an email
+import re
+
+#validates what characters can be used within an email
+regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+test_1 = isalnum(3,16)
+test_2 = isalnum(2, 8)
+test_3 = "com", "edu", "org", "gov" 
+
 def is_valid_email_address(s):
     
     # your code here
+    #passes through the regular expression and the string in the search()
+    if(re.search(regex, s))
+        print("Valid Email Address")
 
+    else:
+        print("Invalid Email Address")
+
+    #Part A: returns email address if valid within 3 to 16 characters 
+    if (re.search(test_1,s)):
+        return 1, "must contain 3 - 16 alfanum chars before @ or domain"
+           
+    elif test_1.isalnum() == False:
+        return 2, "only contains alfanum chars before the @"
+
+    #Part B: returns email address if valid within 2 to 8 characters
+    if (re.search(test_2, s)):
+        return 3, "must contain 2 - 8 alfanum chars before @ or domain"
+       
+    elif test_2.isalnum() == False:
+        return 4, "only contains alfanum chars before the @ or domain"
     
+    #Part C: email must contain at least com, edu, org, gov
+    if R not in ["com", "edu", "org", "gov"]:
+        return 5, "Domain name has invalid character, try again" 
+    
+    return None, "Code should run, nice job"
 
 
     
