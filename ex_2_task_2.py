@@ -36,6 +36,27 @@ gave_up = False
 attempts_left = 3
 
 # your code - start
+while True:
+    email - input("Enter email address")
+    # call is_valid with the input email and store the results in code and error
+    code, error = is_valid(email)
+
+    if code == None:  # code works if valid email
+        print(email, "is valid!")
+        break  # stops the code if valid otherwise it will on to line 48 to make another attempt
+    # error
+    attempts_left -= 1 #no attempts left and code will rerun since it is within a While loop
+
+    if (attempts_left == 0):
+            gave_up = True
+            print("No more attempts, please try again.")
+            break
+        # If you have more attempts, you can try again.
+        else:
+            print("Please try again. You have " + str(attempts_left) + " attempts left.")
+        else:
+        # If the address is good, the code stops.
+            break
 
 
 # your code - end
